@@ -28,6 +28,7 @@
     <modules>
         <module>shared</module>
         <module>producer</module>
+        <module>mail</module>
         <module>consumer</module>
         <module>worker</module>
     </modules>
@@ -42,7 +43,12 @@
             </dependency>
             <dependency>
                 <groupId>com.example</groupId>
-                <artifactId>producer</artifactId>
+                <artifactId>mail</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.example</groupId>
+                <artifactId>payment</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>

@@ -9,74 +9,18 @@
         <groupId>com.example</groupId>
         <artifactId>notification-system-parent</artifactId>
         <version>1.0.0</version>
+        <relativePath>..</relativePath>
     </parent>
 
-    <artifactId>producer</artifactId>
-    <packaging>jar</packaging>
-    <name>Notification System - Producer</name>
-    <description>API/HTTP Producer for sending notifications to Kafka</description>
+    <groupId>com.example</groupId>
+    <artifactId>producer-parent</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
 
-    <dependencies>
-        <!-- Internal -->
-        <dependency>
-            <groupId>com.example</groupId>
-            <artifactId>shared</artifactId>
-        </dependency>
+    <name>Notification System - Producer Parent</name>
+    <description>Parent module for producer-related services</description>
 
-        <!-- Spring Boot Web -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <!-- Kafka -->
-        <dependency>
-            <groupId>org.springframework.kafka</groupId>
-            <artifactId>spring-kafka</artifactId>
-        </dependency>
-
-        <!-- Validation -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-validation</artifactId>
-        </dependency>
-
-        <!-- Lombok -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <scope>provided</scope>
-        </dependency>
-
-        <!-- Jackson -->
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.datatype</groupId>
-            <artifactId>jackson-datatype-jsr310</artifactId>
-        </dependency>
-
-        <!-- Test -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.kafka</groupId>
-            <artifactId>spring-kafka-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
+    <modules>
+        <module>payment</module>
+    </modules>
 </project>

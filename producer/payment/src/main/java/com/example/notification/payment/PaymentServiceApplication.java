@@ -1,12 +1,11 @@
-package com.example.notification.producer;
+package com.example.notification.payment;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ProducerApplication {
-
+public class PaymentServiceApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ProducerApplication.class, args);
+        SpringApplication.run(PaymentServiceApplication.class, args);
     }
 }
