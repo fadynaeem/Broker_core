@@ -29,11 +29,11 @@
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
 
-        <!-- SendGrid SDK for Email -->
+        <!-- Stripe SDK for Payment Processing -->
         <dependency>
-            <groupId>com.sendgrid</groupId>
-            <artifactId>sendgrid-java</artifactId>
-            <version>4.9.3</version>
+            <groupId>com.stripe</groupId>
+            <artifactId>stripe-java</artifactId>
+            <version>24.16.0</version>
         </dependency>
 
         <!-- Jackson -->

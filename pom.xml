@@ -26,11 +26,11 @@
     </properties>
 
     <modules>
-        <module>shared</module>
+        <module>event_mangements</module>
         <module>producer</module>
         <module>mail</module>
-        <module>consumer</module>
         <module>worker</module>
+        <module>consumer</module>
     </modules>
 
     <dependencyManagement>

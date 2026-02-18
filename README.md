@@ -20,6 +20,34 @@ Worker Pipeline:
   8. Max retries → DLQ (Dead Letter Queue)
 ```
 
+  ## 💳 Payment Kafka Flow (Current)
+
+  ```
+  API /api/payment/process
+    ↓
+  Payment Producer (save PENDING in DB)
+    ↓
+  Kafka Topic: payment-events
+    ↓
+  Consumer: payment-worker-group
+    ↓
+  Worker (StripePaymentAdapter)
+    ↓
+  Success → publish confirmation to payment-confirmations + commit offset
+  Failure → no ack (message retried)
+    ↓
+  Payment Producer listener updates DB to COMPLETED
+    ↓
+  Kafka Topic: maill (email notification event)
+    ↓
+  Mail Observer sends confirmation email
+  ```
+
+  ### Topics Used (Payment)
+  - `payment-events` - Payment requests from producer
+  - `payment-confirmations` - Confirmation events back to producer
+  - `maill` - Email notification events (transactionId + userEmail + status)
+
 ## 🚀 Features
 
 - ✅ **Email Notifications** via SendGrid
