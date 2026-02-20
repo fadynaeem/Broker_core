@@ -1,0 +1,9 @@
+com\example\worker\processor\PaymentProcessor.class
+com\example\worker\processor\ProcessingResult$ProcessingResultBuilder.class
+com\example\worker\config\WorkerConfig.class
+com\example\worker\adapter\StripePaymentAdapter.class
+com\example\worker\model\PaymentMessage.class
+com\example\worker\processor\ProcessingResult.class
+com\example\worker\adapter\DeliveryAdapter.class
+com\example\worker\config\StripeConfig.class
+com\example\worker\model\PaymentMessage$PaymentMessageBuilder.class

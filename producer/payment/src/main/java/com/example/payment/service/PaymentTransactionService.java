@@ -12,25 +12,18 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.util.UUID;
-
 @Slf4j
 @Service
 public class PaymentTransactionService {
-
     @Autowired
     private EventPublisher eventPublisher;
-
     @Autowired
     private PaymentRepository paymentRepository;
-
     @Value("${kafka.payment.topic:payment-events}")
     private String paymentTopic;
-
     public String publishPaymentEvent(PaymentRequestDTO request) {
         String transactionId = UUID.randomUUID().toString();
         String description = request.getDescription() != null ? request.getDescription() : "Payment transaction";
-
-        // 1. Save PENDING payment to DB so PaymentConfirmationListener can find it later
         Payment payment = Payment.builder()
                 .transactionId(transactionId)
                 .userId(request.getUserId())
@@ -42,8 +35,6 @@ public class PaymentTransactionService {
                 .createdAt(LocalDateTime.now())
                 .build();
         paymentRepository.save(payment);
-
-        // 2. Publish the Kafka event so the worker can process it
         PaymentEvent event = PaymentEvent.builder()
                 .transactionId(transactionId)
                 .userEmail(request.getUserId())
@@ -52,7 +43,6 @@ public class PaymentTransactionService {
                 .description(description)
                 .createdAt(LocalDateTime.now())
                 .build();
-
         return eventPublisher.publishEvent(event, paymentTopic);
     }
 }

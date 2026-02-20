@@ -7,20 +7,20 @@
 
     <parent>
         <groupId>com.example</groupId>
-        <artifactId>notification-system-parent</artifactId>
+        <artifactId>BrokerCore</artifactId>
         <version>1.0.0</version>
     </parent>
 
     <artifactId>mail</artifactId>
     <packaging>jar</packaging>
-    <name>Notification System - Mail Observer</name>
+    <name>BrokerCore- Mail Observer</name>
     <description>Mail Observer for monitoring transactions and sending notifications</description>
 
     <dependencies>
         <!-- Internal -->
         <dependency>
             <groupId>com.example</groupId>
-            <artifactId>shared</artifactId>
+            <artifactId>event_mangement</artifactId>
         </dependency>
 
         <!-- Spring Boot -->
@@ -34,8 +34,6 @@
             <groupId>org.springframework.kafka</groupId>
             <artifactId>spring-kafka</artifactId>
         </dependency>
-
-        <!-- SendGrid SDK for Email -->
         <dependency>
             <groupId>com.sendgrid</groupId>
             <artifactId>sendgrid-java</artifactId>
@@ -83,7 +81,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.example.notification.mail.MailObserverApplication</mainClass>
+                    <mainClass>com.example.mail.MailObserverApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>

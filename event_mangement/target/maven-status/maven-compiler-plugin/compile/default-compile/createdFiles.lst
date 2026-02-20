@@ -1,0 +1,11 @@
+com\example\shared\event\KafkaEventPublisher.class
+com\example\shared\event\PaymentEvent.class
+com\example\shared\model\Channel.class
+com\example\shared\event\EventPublisher.class
+com\example\shared\event\PaymentEvent$PaymentEventBuilder.class
+com\example\shared\model\DeliveryResult.class
+com\example\shared\model\NotificationMessage.class
+com\example\shared\model\NotificationStatus.class
+com\example\shared\model\DeliveryResult$DeliveryResultBuilder.class
+com\example\shared\model\NotificationMessage$NotificationMessageBuilder.class
+com\example\shared\event\ProducerEvent.class

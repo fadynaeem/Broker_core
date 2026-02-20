@@ -1,0 +1,8 @@
+C:\tmp_broker\event_mangement\src\main\java\com\example\shared\event\ProducerEvent.java
+C:\tmp_broker\event_mangement\src\main\java\com\example\shared\model\NotificationMessage.java
+C:\tmp_broker\event_mangement\src\main\java\com\example\shared\model\NotificationStatus.java
+C:\tmp_broker\event_mangement\src\main\java\com\example\shared\event\EventPublisher.java
+C:\tmp_broker\event_mangement\src\main\java\com\example\shared\event\KafkaEventPublisher.java
+C:\tmp_broker\event_mangement\src\main\java\com\example\shared\model\DeliveryResult.java
+C:\tmp_broker\event_mangement\src\main\java\com\example\shared\event\PaymentEvent.java
+C:\tmp_broker\event_mangement\src\main\java\com\example\shared\model\Channel.java

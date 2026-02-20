@@ -20,7 +20,6 @@ public class PaymentRequestDTO {
     private BigDecimal amount;
     @NotBlank(message = "Currency is required")
     private String currency = "USD";
-
     @NotBlank(message = "Payment method is required")
     private String paymentMethod = "CREDIT_CARD";
     private String description;

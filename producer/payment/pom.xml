@@ -21,7 +21,7 @@
         <!-- Internal -->
         <dependency>
             <groupId>com.example</groupId>
-            <artifactId>shared</artifactId>
+            <artifactId>event_mangement</artifactId>
         </dependency>
 
         <!-- Spring Boot Web -->

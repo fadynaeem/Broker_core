@@ -6,13 +6,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
-    <artifactId>notification-system-parent</artifactId>
+    <artifactId>BrokerCore</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
-
-    <name>Notification System - Parent</name>
-    <description>Event-driven notification system with producer-consumer separation</description>
-
+    <name>Event Driven Distribution System</name>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -26,9 +23,9 @@
     </properties>
 
     <modules>
-        <module>event_mangements</module>
+        <module>event_mangement</module>
         <module>producer</module>
-        <module>mail</module>
+        <module>Observe_mail</module>
         <module>worker</module>
         <module>consumer</module>
     </modules>
@@ -38,7 +35,7 @@
             <!-- Internal modules -->
             <dependency>
                 <groupId>com.example</groupId>
-                <artifactId>shared</artifactId>
+                <artifactId>event_mangement</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>

@@ -3,7 +3,7 @@ package com.example.worker.adapter;
 import com.example.shared.model.DeliveryResult;
 import com.example.worker.config.StripeConfig;
 import com.example.shared.event.PaymentEvent;
-import com.stripe.Stripe;
+import com.stripe.StripeClient;
 import com.stripe.exception.StripeException;
 import com.stripe.model.PaymentIntent;
 import com.stripe.param.PaymentIntentCreateParams;
@@ -16,6 +16,7 @@ import java.math.BigDecimal;
 @RequiredArgsConstructor
 public class StripePaymentAdapter implements DeliveryAdapter {
     private final StripeConfig config;
+    private final StripeClient stripeClient;
     @Override
     public DeliveryResult deliver(PaymentEvent message) {
         try {
@@ -32,7 +33,7 @@ public class StripePaymentAdapter implements DeliveryAdapter {
             if (config.isMockMode() || "MOCK".equals(config.getApiKey())) {
                 log.info("PAYMENT NOTIFICATION (MOCK MODE)");
                 log.info("Customer: {}", customerEmail);
-                log.info("Amount: {} cents ({} {})", amountInCents, 
+                log.info("Amount: {} cents ({} {})", amountInCents,
                          formatAmount(amountInCents), config.getCurrency().toUpperCase());
                 log.info("Description: {}", description);
                 log.info("Transaction: {}", message.getTransactionId());
@@ -41,7 +42,6 @@ public class StripePaymentAdapter implements DeliveryAdapter {
                         .messageId("MOCK-PAYMENT-" + System.currentTimeMillis())
                         .build();
             }
-            Stripe.apiKey = config.getApiKey();
             PaymentIntentCreateParams params = PaymentIntentCreateParams.builder()
                     .setAmount(amountInCents)
                     .setCurrency(message.getCurrency() != null ? message.getCurrency() : config.getCurrency())
@@ -53,8 +53,8 @@ public class StripePaymentAdapter implements DeliveryAdapter {
                                     .build()
                     )
                     .build();
-            PaymentIntent paymentIntent = PaymentIntent.create(params);
-            log.info("Payment intent created successfully. ID: {}, Status: {}", 
+            PaymentIntent paymentIntent = stripeClient.paymentIntents().create(params);
+            log.info("Payment intent created successfully. ID: {}, Status: {}",
                      paymentIntent.getId(), paymentIntent.getStatus());
             return DeliveryResult.builder()
                     .success(true)

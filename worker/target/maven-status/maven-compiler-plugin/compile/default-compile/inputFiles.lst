@@ -1,0 +1,7 @@
+C:\tmp_broker\worker\src\main\java\com\example\worker\processor\ProcessingResult.java
+C:\tmp_broker\worker\src\main\java\com\example\worker\adapter\StripePaymentAdapter.java
+C:\tmp_broker\worker\src\main\java\com\example\worker\model\PaymentMessage.java
+C:\tmp_broker\worker\src\main\java\com\example\worker\config\WorkerConfig.java
+C:\tmp_broker\worker\src\main\java\com\example\worker\processor\PaymentProcessor.java
+C:\tmp_broker\worker\src\main\java\com\example\worker\adapter\DeliveryAdapter.java
+C:\tmp_broker\worker\src\main\java\com\example\worker\config\StripeConfig.java

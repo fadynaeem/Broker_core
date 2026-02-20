@@ -7,7 +7,7 @@
 
     <parent>
         <groupId>com.example</groupId>
-        <artifactId>notification-system-parent</artifactId>
+        <artifactId>BrokerCore</artifactId>
         <version>1.0.0</version>
         <relativePath>..</relativePath>
     </parent>
@@ -17,7 +17,7 @@
     <version>1.0.0</version>
     <packaging>pom</packaging>
 
-    <name>Notification System - Producer Parent</name>
+    <name>BrokerCore - Producer Parent</name>
     <description>Parent module for producer-related services</description>
 
     <modules>

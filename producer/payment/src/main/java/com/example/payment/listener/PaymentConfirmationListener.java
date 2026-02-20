@@ -62,7 +62,6 @@ public class PaymentConfirmationListener {
             log.error("Failed to process confirmation message: {}", message, e);
         }
     }
-
     private void publishMailEvent(Payment payment) throws Exception {
         Map<String, Object> payload = new HashMap<>();
         payload.put("transactionId", payment.getTransactionId());
