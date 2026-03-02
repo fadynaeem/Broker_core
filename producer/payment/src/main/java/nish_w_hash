@@ -1,0 +1,11 @@
+Client
+↓
+API Gateway  .. 
+↓
+Bloom Filter   >> reject duplicate keys fast bloom is a filteration method to spilt db into segment to reduce search spaces .
+↓
+Database       >> persistent record to implements Acid concepts and save transactions.  
+↓
+Kafka          >>message broker to save eevnts and maintain all event accure .. how to mange kafka topics and partitions ..>>
+↓
+Payment Provider >-mail use SendGrid >> worker field repressent how consume servcie ..

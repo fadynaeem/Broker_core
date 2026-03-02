@@ -15,6 +15,8 @@ import java.math.BigDecimal;
 public class PaymentRequestDTO {
     @NotBlank(message = "User ID is required")
     private String userId;
+    @NotBlank(message = "Payment key is required")
+    private String paymentKey;
     @NotNull(message = "Amount is required")
     @Positive(message = "Amount must be positive")
     private BigDecimal amount;
