@@ -4,8 +4,8 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 /**
  * Core Bloom Filter — String Marker with Double Hashing
- *   h1 = SHA-256(s) → int
- *   h2 = MD5(s)     → int
+ *   h1 = SHA-256(s) 
+ *   h2 = MD5(s)     
  *   position_i = |h1 + i × h2| % size
  */
 public class BloomFilter {

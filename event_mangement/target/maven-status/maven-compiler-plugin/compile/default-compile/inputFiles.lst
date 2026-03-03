@@ -1,8 +1,10 @@
 C:\tmp_broker\event_mangement\src\main\java\com\example\shared\event\ProducerEvent.java
-C:\tmp_broker\event_mangement\src\main\java\com\example\shared\model\NotificationMessage.java
-C:\tmp_broker\event_mangement\src\main\java\com\example\shared\model\NotificationStatus.java
+C:\tmp_broker\event_mangement\src\main\java\com\example\kafka_Config\TopicManager.java
 C:\tmp_broker\event_mangement\src\main\java\com\example\shared\event\EventPublisher.java
-C:\tmp_broker\event_mangement\src\main\java\com\example\shared\event\KafkaEventPublisher.java
-C:\tmp_broker\event_mangement\src\main\java\com\example\shared\model\DeliveryResult.java
+C:\tmp_broker\event_mangement\src\main\java\com\example\kafka_Config\KafkaProducerFactory.java
+C:\tmp_broker\event_mangement\src\main\java\com\example\kafka_Config\KafkaBase.java
+C:\tmp_broker\event_mangement\src\main\java\com\example\kafka_Config\BaseProducer.java
 C:\tmp_broker\event_mangement\src\main\java\com\example\shared\event\PaymentEvent.java
+C:\tmp_broker\event_mangement\src\main\java\com\example\kafka_Config\PaymentProducer.java
 C:\tmp_broker\event_mangement\src\main\java\com\example\shared\model\Channel.java
+C:\tmp_broker\event_mangement\src\main\java\com\example\kafka_Config\KafkaArchApplication.java

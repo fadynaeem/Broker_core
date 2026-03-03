@@ -4,23 +4,19 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
          http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <parent>
         <groupId>com.example</groupId>
         <artifactId>BrokerCore</artifactId>
         <version>1.0.0</version>
     </parent>
-
     <artifactId>BrokerCore-consumer</artifactId>
     <packaging>jar</packaging>
     <name>BrokerCore - Consumer</name>
     <description>Kafka Consumer</description>
-
     <dependencies>
-        <!-- Internal -->
         <dependency>
             <groupId>com.example</groupId>
-            <artifactId>shared</artifactId>
+            <artifactId>event_mangement</artifactId>
         </dependency>
         <dependency>
             <groupId>com.example</groupId>
@@ -38,8 +34,6 @@
             <groupId>org.springframework.kafka</groupId>
             <artifactId>spring-kafka</artifactId>
         </dependency>
-
-        <!-- SendGrid SDK for Email -->
         <dependency>
             <groupId>com.sendgrid</groupId>
             <artifactId>sendgrid-java</artifactId>
