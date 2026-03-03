@@ -1,0 +1,11 @@
+/**
+ *     Hierarchy:
+ *
+ *                                                    KafkaBase
+ *                                /                       |              \
+ *     TopicManager                                                     KafkaProducerFactory 
+ *   - infra-only                                                            \
+ *   - topic-lifecycle (create / delete / alter)                          BaseProducer
+ *   - AdminClient                                                   - producer-config (enable.idempotence=true, acks=all, retries)
+ *   - idempotent-creation, retry/backoff                            - caching (shared thread-safe Producer instances)
+ *   - audit / change-control                                        - ProducerFactory / KafkaTemplate

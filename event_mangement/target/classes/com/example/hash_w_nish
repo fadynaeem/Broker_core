@@ -1,9 +1,9 @@
 /**
- * Hierarchy:
+ *     Hierarchy:
  *
  *                                                    KafkaBase
- *                                /                       |           \
- * TopicManager                                                     KafkaProducerFactory 
+ *                                /                       |              \
+ *     TopicManager                                                     KafkaProducerFactory 
  *   - infra-only                                                            \
  *   - topic-lifecycle (create / delete / alter)                          BaseProducer
  *   - AdminClient                                                   - producer-config (enable.idempotence=true, acks=all, retries)
