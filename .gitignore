@@ -1,3 +1,9 @@
+# Compiled Java class files
+*.class
+
+# Maven target directories
+target/
+
 .env
 .env.local
 .env.*.local
