@@ -23,7 +23,7 @@
     </properties>
 
     <modules>
-        <module>event_mangement</module>
+        <module>kafka_architecture</module>
         <module>producer</module>
         <module>Observe_mail</module>
         <module>worker</module>
@@ -35,7 +35,7 @@
             <!-- Internal modules -->
             <dependency>
                 <groupId>com.example</groupId>
-                <artifactId>event_mangement</artifactId>
+                <artifactId>kafka_architecture</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>

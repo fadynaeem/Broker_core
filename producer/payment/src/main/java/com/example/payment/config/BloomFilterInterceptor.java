@@ -14,10 +14,8 @@ import org.springframework.web.servlet.HandlerInterceptor;
 @Slf4j
 @Component
 public class BloomFilterInterceptor implements HandlerInterceptor {
-
     @Autowired private BloomFilter bloomFilter;
     @Autowired private ObjectMapper objectMapper;
-
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
     throws Exception {
@@ -27,7 +25,7 @@ public class BloomFilterInterceptor implements HandlerInterceptor {
         catch (Exception e) {
             return reject(response, HttpStatus.BAD_REQUEST, "{\"error\":\"Invalid JSON body\"}");
         }
-        String userId     = json.path("userId").asText(null);
+        String userId = json.path("userId").asText(null);
         String paymentKey = json.path("paymentKey").asText(null);
         if (userId == null || userId.isBlank())
             return reject(response, HttpStatus.BAD_REQUEST, "{\"error\":\"Missing userId in body\"}");
@@ -36,10 +34,7 @@ public class BloomFilterInterceptor implements HandlerInterceptor {
         String bloomKey = paymentKey + ":" + userId;
         if (bloomFilter.isMarked(bloomKey)) {
             log.warn("Bloom: key='{}' flagged — blocked", bloomKey);
-            return reject(response, HttpStatus.FORBIDDEN,
-                    "{\"error\":\"Duplicate or flagged payment request\","
-                    + "\"userId\":\"" + userId + "\","
-                    + "\"paymentKey\":\"" + paymentKey + "\"}");
+            return reject(response, HttpStatus.FORBIDDEN, "{\"error\":\"Duplicate or flagged payment request\","   + "\"userId\":\"" + userId + "\","+ "\"paymentKey\":\"" + paymentKey + "\"}");
         }
         bloomFilter.mark(bloomKey);
         log.info("Bloom: key='{}' marked — allowed", bloomKey);

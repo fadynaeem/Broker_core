@@ -20,7 +20,7 @@
         <!-- Internal -->
         <dependency>
             <groupId>com.example</groupId>
-            <artifactId>event_mangement</artifactId>
+            <artifactId>kafka_architecture</artifactId>
         </dependency>
 
         <!-- Spring Boot -->

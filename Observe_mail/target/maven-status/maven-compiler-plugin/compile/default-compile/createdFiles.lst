@@ -1,0 +1,5 @@
+com\example\mail\service\MailNotificationService.class
+com\example\mail\config\MailConfig.class
+com\example\mail\service\MailObservationService.class
+com\example\mail\listener\TransactionEventListener.class
+com\example\mail\MailObserverApplication.class
