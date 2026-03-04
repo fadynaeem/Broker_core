@@ -81,6 +81,8 @@ It enforces single-responsibility layers, centralizes topic management, and uses
 Java 21 · Spring Boot 3.2.2 · Apache Kafka (Confluent 7.5.0) · Spring Kafka (manual ACK) · Stripe API · Maven multi-module · Docker Compose
 
 
+## System Architecture & Flow
+![System Architecture](diagrams/System%20Architecture.png)
 ## Modules
 
 | Module | Responsibility |
